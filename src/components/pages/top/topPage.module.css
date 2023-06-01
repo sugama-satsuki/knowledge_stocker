@@ -1,0 +1,256 @@
+
+#main {
+    background-color: var(--color-bgColor);
+    position: fixed;
+    top: 0;
+    left: var(--sideMenu-width-s);
+    width:  calc(100% - var(--sideMenu-width-s));
+    height: 100%;
+    box-sizing: border-box;
+}
+.ly_main__inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* ヘッダー */
+.bl_header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: var(--header-height);
+    padding: 0 var(--space-m);
+    box-sizing: border-box;
+    width: 100%;
+}
+.bl_header__inner {
+    width: 100%;
+    height: 88%;
+    box-sizing: border-box;
+    border-bottom: solid 1px var(--color-lightGray);
+    padding: var(--space-xs) 0;
+}
+/* 検索エリア */
+.el_searchArea {
+    background-color: var(--color-white);
+    border-radius: var(--border-radius-rounded);
+    padding: var(--space-xs) var(--space-m);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--searchArea-width);
+    height: var(--searchArea-height);
+}
+.el_searchArea > input {
+    border: none;
+    height: 100%;
+    width: 100%;
+    background-color: var(--color-white);
+}
+.el_searchArea > input:focus {
+    outline: none;
+}
+
+/* サブメニュー */
+.bl_subMenu {
+    width: var(--sideMenu-width-m);
+    height: calc(100% - var(--header-height));
+    position: absolute;
+    top: var(--header-height);
+    left: 0;
+    padding-left: var(--space-m);
+    box-sizing: border-box;
+    margin-top: var(--space-m);
+}
+.bl_subMenu > li {
+    margin-bottom: var(--space-s);
+    text-align: left;
+    padding: var(--space-xs) var(--space-l);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: left;
+    align-items: flex-end;
+}
+.bl_subMenu > li > span {
+    margin-top: var(--space-xs);
+    margin-bottom: var(--space-xs);
+    box-sizing: border-box;
+    display: block;
+}
+.is_select {
+    border-radius: var(--border-radius-rounded) 0 0  var(--border-radius-rounded);
+    background-color: var(--color-white);
+}
+.is_select::before,
+.is_select::after{
+    content:"";
+    width:var(--space-l);
+    height:var(--space-m);
+    position:absolute;
+    bottom:100%;
+    right: calc(var(--space-xs)* -1);
+}
+.is_select::before{
+    background-color: var(--color-white);
+}
+.is_select::after{
+    background-color: var(--color-bgColor);
+    border-radius:0 0 100% 0;
+}
+
+.bl_mainContent {
+    background-color: var(--color-white);
+    border-radius: var(--border-radius-l) 0 0 0;
+    height: calc(100% - var(--header-height));
+    position: absolute;
+    width: calc(100% - var(--sideMenu-width-m));
+    top: var(--header-height);
+    left: var(--sideMenu-width-m);
+}
+
+
+
+/* -----
+-- メニュー -- 
+-----------*/
+.bl_sideMenu {
+    width: var(--sideMenu-width-s);
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 2px 0px 4px 0px var(--color-shadow);
+    background: linear-gradient(-0deg, var(--color-green) 0%, var(--color-green2) 40%, var(--color-green2) 100%);
+    box-sizing: border-box;
+}
+.bl_sideMenu__inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    box-sizing: border-box;
+}
+
+/* button */
+.bl_sideMenu__btn {
+    width: var(--sideMenu-btn-width);
+    height: var(--sideMenu-btn-height);
+    position: absolute;
+    top: var(--space-l);
+    left: calc((var(--sideMenu-width-s) - var(--sideMenu-btn-width)) / 2);
+    box-sizing: border-box;
+}
+.bl_sideMenu__btn__inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.bl_sideMenu__btn__bar {
+    width: 100%;
+    height: var(--border-size-s);
+    border-radius: var(--border-radius-rounded);
+    background-color: var(--color-white);
+    margin-bottom: var(--space-xs);
+    display: block;
+    transition: top 0.24s, transform 0.24s, opacity 0.24s;
+}
+.bl_sideMenu__btn__bar.is_active:nth-child(1) {
+    position: absolute;
+    top:25%;
+    transform: translateY(-50%) rotate(150deg);
+}
+.bl_sideMenu__btn__bar.is_active:nth-child(2) {
+    transform: translate(50%, -50%);
+    opacity: 0;
+}
+.bl_sideMenu__btn__bar.is_active:nth-child(3) {
+    position: absolute;
+    top: 25%;
+    transform: translateY(-50%) rotate(-150deg);
+}
+
+/* menu item */
+.bl_sideMenu__menuItemWrapper {
+    position: absolute;
+    top: calc(var(--sideMenu-btn-height) + var(--space-l) + var(--space-l));
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: var(--space-s);
+}
+.bl_sideMenu__menuItem {
+    padding: var(--space-xs);
+    display: flex;
+    flex-direction: column;
+    transition: all 0.5s;
+    margin-bottom: var(--space-s);
+    border-radius: var(--border-radius-s);
+}
+.bl_sideMenu__menuItem:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: all 0.5s;
+}
+
+.el_menuItem__icon {
+    font-size: var(--font-size-big);
+    color: var(--color-white);
+    letter-spacing: 0;
+    line-height: 1;
+}
+
+.el_menuItem__text {
+    font-size: var(--font-size-smallP);
+    color: var(--color-white);
+    letter-spacing: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/* 新規作成ボタン */
+.bl_addBtnWrapper {
+    position: absolute;
+    bottom: var(--space-l);
+    left: calc((var(--sideMenu-width-s) - var(--sideMenu-btn-height)) / 2);
+    width: var(--sideMenu-btn-height);
+    height: var(--sideMenu-btn-height);
+}
+.el_addBtn {
+    font-size: var(--sideMenu-btn-height);
+    color: var(--color-white);
+}
+
+.el_addBtn:hover {
+    animation-name: Rotating;
+    animation-fill-mode:forwards;
+    animation-duration:0.5s;
+    animation-timing-function:ease-out;
+    animation-direction:normal;
+    filter: drop-shadow(2px 2px 4px var(--color-shadow));
+}
+    
+@keyframes Rotating{
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(90deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    75% {
+        transform: rotate(270deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* element ~~~~~~~~~ */
+
+.el_symbol {
+    font-size: var(--font-size-h1);
+    font-weight: bold;
+    margin-right: var(--space-s);
+}

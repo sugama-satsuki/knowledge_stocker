@@ -1,0 +1,85 @@
+:root {
+    /* color */
+    --color-blue: #359AE1;
+    --color-bgColor: #ECEBEC;
+    --color-navy: #0f0f33;
+    --color-gray: #666;
+    --color-lightGray: #DEDBEB;
+    --color-white: #fff;
+    --color-pink: #E54781;
+    --color-red: #ff6347;
+    --color-orange: #F5AD31;
+    --color-purple: #845CB7;
+    --color-green: #3cb371;
+    --color-green2: #1E9C9A;
+    --color-lightGreen: #B5DFED;
+    --color-bgBlur: rgba(0, 0, 0, 0.3);
+    --color-shadow: rgba(0, 0, 0, 0.3);
+  
+
+    /* border size */
+    --border-size-xs: 1px;
+    --border-size-s: 2px;
+    --border-size-m: 4px;
+
+
+    /* size */
+    --sideMenu-width-s: 64px;
+    --sideMenu-width-m: 240px;
+    --sideMenu-width-none: 0px;
+    --header-height: 64px;
+    --sideMenu-btn-width: 32px;
+    --sideMenu-btn-height: 32px;
+    --searchArea-width: 300px;
+    --searchArea-height: 32px;
+
+  
+    /* space: padding */
+    --space-xs: 4px;
+    --space-s: 8px;
+    --space-m: 16px;
+    --space-l: 24px;
+    --space-xl: 32px;
+  
+    /* border-radius */
+    --border-radius-none: 0px;
+    --border-radius-s: 4px;
+    --border-radius-m: 8px;
+    --border-radius-l: 16px;
+    --border-radius-rounded: 100px;
+    --border-radius-circle: 100%;
+  
+    /* font-size */
+    --font-size-big: 28px;
+    --font-size-h1: 24px;
+    --font-size-h2: 18px;
+    --font-size-p: 14px;
+    --font-size-smallP: 8.5px;
+    
+}
+  
+  
+h1, h2, h3, h4, p, div, a {
+    margin: 0;
+    padding: 0;
+    letter-spacing: 1px;
+    color: var(--color-navy);
+    line-height: 1;
+}
+  
+p, div, a {
+    font-size: var(--font-size-p);
+}
+  
+a {
+    text-decoration: none;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    list-style:none;
+    line-height: 1;
+}
